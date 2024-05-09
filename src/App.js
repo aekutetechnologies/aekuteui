@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Component from './Components/Component';
 import About from './Components/About';
+import Data from './Components/Data';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route path='/component/:id' element={<Data/>} />
             <Route path="/component" element={<Component />} />
             <Route path="/about" element={<About />} />
           </Routes>
