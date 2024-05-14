@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Components from "./components/Components";
@@ -16,9 +16,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/ui/button" element={<Button />} />
-              <Route path="/ui/alert" element={<Alert />} />
+              <Route path="components/ui/alert" element={<Alert />} />
               <Route path="/components" element={<Components />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/pricing" element={<About />} />
             </Routes>
           </div>
           {/* <Footer/> */}

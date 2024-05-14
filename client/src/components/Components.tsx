@@ -12,7 +12,7 @@ const Components = () => {
 
         <ul className="grid grid-cols-4 gap-4">
           <Link
-            to="ui/alert"
+            to="components/ui/alert"
             className="text-lg font-bold text-center text-white"
           >
             <li className="bg-gray-800 p-10 rounded-lg shadow-sm border border-sky-500 hover:shadow-lg hover:outline hover:outline-2 hover:outline-blue-500 ">
