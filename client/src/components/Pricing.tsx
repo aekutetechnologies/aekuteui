@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -56,7 +57,7 @@ const Card1 = () => {
         </p>
       </div>
       <button className="absolute bottom-4 left-4 right-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white">
-        Get it now
+        <Link to='/pricing/subscription'>Get it now</Link>
       </button>
       <Background />
     </motion.div>

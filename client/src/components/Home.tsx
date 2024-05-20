@@ -41,7 +41,6 @@
 
 // export default Home;
 
-
 // import { Link } from "react-router-dom";
 // import { useEffect } from "react";
 // import {  animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -98,10 +97,15 @@
 
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import {
+  animate,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 
-const COLORS = ['#FFC700', '#FF6B6B', '#48CAE4', '#5E60CE']; // Light theme colors
+const COLORS = ["#FFC700", "#FF6B6B", "#48CAE4", "#5E60CE"]; // Light theme colors
 const Home = () => {
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #FFFFFF 50%, ${color})`;
@@ -113,7 +117,7 @@ const Home = () => {
       ease: "easeInOut",
       duration: 10,
       repeat: Infinity,
-      repeatType: "mirror"
+      repeatType: "mirror",
     });
   }, []);
 
@@ -126,23 +130,44 @@ const Home = () => {
       <div className="container mx-auto">
         <div className="relative z-10 flex flex-col h-screen justify-center items-center text-gray-900">
           <h1 className="max-w-3xl text-6xl font-bold">Animate your website</h1>
-          <p className="max-w-lg my-6 text-center text-base leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt atque numquam aut accusantium voluptates fuga dolores hic mollitia tempore?</p>
+          <p className="max-w-lg my-6 text-center text-base leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            incidunt atque numquam aut accusantium voluptates fuga dolores hic
+            mollitia tempore?
+          </p>
 
-          <motion.button
-            whileHover={{
-              scale: 1.015,
-            }}
-            whileTap={{
-              scale: 0.985,
-            }}
-            style={{ border, boxShadow }}
-            className="group relative flex items-center gap-1.5 rounded-full bg-gray-200 px-4 py-2 text-gray-900 transition-colors hover:bg-gray-300"
-          >
-            <Link to="/pricing" className="text-gray-900 font-bold">
-              Build Components
-            </Link>
-            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-          </motion.button>
+          <div className="grid grid-cols-2 gap-4">
+            <motion.button
+              whileHover={{
+                scale: 1.015,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+              style={{ border, boxShadow }}
+              className="group relative flex items-center gap-1.5 rounded-full bg-gray-200 px-4 py-2 text-gray-900 transition-colors hover:bg-gray-300"
+            >
+              <Link to="/pricing" className="text-gray-900 font-bold">
+                Build Components
+              </Link>
+              <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+            </motion.button>
+            <motion.button
+              whileHover={{
+                scale: 1.015,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+              style={{ border, boxShadow }}
+              className="group relative flex items-center gap-1.5 rounded-full bg-gray-200 px-4 py-2 text-gray-900 transition-colors hover:bg-gray-300"
+            >
+              <Link to="/components" className="text-gray-900 font-bold">
+                Get Components
+              </Link>
+              <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+            </motion.button>
+          </div>
         </div>
       </div>
     </motion.section>
@@ -150,4 +175,3 @@ const Home = () => {
 };
 
 export default Home;
-
