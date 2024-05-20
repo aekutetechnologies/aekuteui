@@ -30,7 +30,7 @@ const Button = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col h-screen justify-center text-white">
+      {/* <div className="flex flex-col h-screen justify-center text-white">
         <h1 className="font-bold text-6xl">Buttons</h1>
         <p>
           Buttons allow users to take actions and make choices with a single
@@ -42,7 +42,7 @@ const Button = () => {
         >
           Get Started
         </button>
-      </div>
+      </div> */}
       <div
         className="mx-auto pt-20 pb-10 flex flex-col gap-10 "
         id="componentsSection"
